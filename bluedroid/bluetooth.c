@@ -41,10 +41,8 @@
 
 #define MIN(x,y) (((x)<(y))?(x):(y))
 
-
 static int rfkill_id = -1;
 static char *rfkill_state_path = NULL;
-
 
 static int init_rfkill() {
     char path[64];
