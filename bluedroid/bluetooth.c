@@ -36,13 +36,15 @@
 #define HCI_DEV_ID 0
 #endif
 
-#define HCID_START_DELAY_SEC   5
+#define HCID_START_DELAY_SEC   3
 #define HCID_STOP_DELAY_USEC 500000
 
 #define MIN(x,y) (((x)<(y))?(x):(y))
 
+
 static int rfkill_id = -1;
 static char *rfkill_state_path = NULL;
+
 
 static int init_rfkill() {
     char path[64];
