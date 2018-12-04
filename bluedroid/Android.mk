@@ -38,20 +38,3 @@ LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := bttest
 
 include $(BUILD_EXECUTABLE)
-
-#
-# socktest
-#
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := socktest.c
-
-LOCAL_C_INCLUDES := \
-	system/bluetooth/bluez-clean-headers
-
-LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
-LOCAL_MODULE_TAGS := eng
-LOCAL_MODULE := socktest
-
-include $(BUILD_EXECUTABLE)
