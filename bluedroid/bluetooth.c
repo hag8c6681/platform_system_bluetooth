@@ -250,11 +250,7 @@ int bt_is_enabled() {
         goto out;
     }
 
-    if (dev_info.flags & (1 << (HCI_UP & 31))) {
-        ret = 1;
-    } else {
-        ret = 0;
-    }
+    ret = hci_test_bit(HCI_UP, &dev_info.flags);
 
 out:
     if (hci_sock >= 0) close(hci_sock);
